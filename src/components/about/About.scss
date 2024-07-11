@@ -1,0 +1,166 @@
+@import '../../style.scss';
+
+@include themify() {
+    .about {
+        width: 100%;
+        background: themed("bg");
+        color: themed("textColor");
+        animation: fadeIn 1s;
+
+        .about-head {
+            position: relative;
+            min-height: 100vh;
+
+            img {
+                width: 100%;
+                height: 50vh;
+                object-fit: cover;
+                filter: themed("br");
+            }
+            .about-text {
+                font-size: max(10vw, 100px);
+                width: 30%;
+                padding: 0px 30px;
+                position: absolute;
+                top: 0;
+                margin-top: 140px;
+                color: #fff;
+                text-transform: uppercase;
+            }
+            .about-desc {
+                margin: 100px;
+                width: 70%;
+                position: absolute;
+                right: 0px;
+
+                p {
+                    font-size: 18px;
+
+                    @include mobile {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    .about-team {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+
+        @include mobile {
+            justify-content: end;
+        }
+
+        h1 {
+            margin: 100px;
+            font-size: max(3vw, 20px);
+
+            @include mobile{
+                margin: 0;
+                margin-top: 140px;
+                font-size: max(5vw, 30px);
+            }
+        }
+
+        .second {
+            flex-direction: row-reverse;
+
+            img {
+                transform: translateX(-80px) !important;
+
+                @include mobile {
+                    transform: translateX(-60px) !important;
+                }
+            }
+        }
+        
+        .team-temp {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            width: 100%;
+            animation: pop linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+            margin: 40px;
+
+            @include mobile {
+                justify-content: end;
+                margin: 10px;
+            }
+            
+
+            .profile {
+
+                img {
+                    width: 400px;
+                transform: translateX(40px);
+                border-radius: 25px;
+
+                @include mobile {
+                    width: 200px;
+                }
+                }
+            }
+
+            .details {
+                padding: 10px 60px;
+                border-radius: 25px;
+                background: #4d47a3;
+                color: white;
+
+                .name {
+                    font-size: max(3vw, 50px);
+
+                    @include mobile {
+                    font-size: max(3vw, 30px);
+                    }
+                }
+
+                .desc {
+
+                    @include mobile {
+                        font-size: 12px;
+                    }
+                }
+
+                .title {
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+
+                button {
+                    padding: 10px;
+                    background: transparent;
+                    font-size: 14px;
+                    border: 2px solid white;
+                    color: white;
+
+                    @include mobile {
+                        background: #fff;
+                        color: #4d47a3;
+                        padding: 0px 8px;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes pop {
+    0% {
+        opacity: 0;
+        transform: translateY(290px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+

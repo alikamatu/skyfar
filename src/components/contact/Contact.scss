@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap');
+
+.contact {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: url('https://img.freepik.com/free-vector/realistic-handset-concept_1284-34781.jpg?t=st=1720699108~exp=1720702708~hmac=375bbf723e0a7edd32c8d5419f8e0b642934da3ba32b6c661776052949447d14&w=1380');
+    background-size: cover;
+
+    h1 {
+        font-size: max(4vw, 40px);
+        margin: 0;
+        padding: 0;
+        font-family: Baskervville SC;
+    }
+
+    .place-order {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 50px;
+        margin-top: 100px;
+        padding: 40px;
+        border-radius: 30px;
+        width: 70%;
+    
+        .place-order-left {
+            width: 100%;
+            max-width: max(70%, 800px);
+            background: #ffffff70;
+            border-radius: 40px;
+            padding: 50px;
+    
+            .title {
+                font-size: 30px;
+                font-weight: 600;
+                margin-bottom: 50px;
+            }
+    
+            input {
+                margin-bottom: 15px;
+                width: 100%;
+                padding: 10px;
+                outline-color: tomato;
+                border: none;
+                background: transparent;
+                border-bottom: 1px solid black;
+            }
+
+            select {
+                padding: 10px;
+                margin-bottom: 15px;
+                width: 100%;
+                border: none;
+                background: transparent;
+                border-bottom: 1px solid black;
+                outline: none;
+            }
+
+            textarea {
+                padding: 10px;
+                border: 1px solid black;
+                border-radius: 4px;
+                margin-bottom: 15px;
+                width: 100%;
+                background: transparent;
+            }
+    
+    
+            .multi-fields {
+                display: flex;
+                gap: 10px;
+            }
+        }
+    }
+
+    button {
+        padding: 10px 25px;
+        font-size: 18px;
+        font-weight: 500;
+        border: none;
+        background: black;
+        color: white;
+    }
+}

@@ -1,0 +1,99 @@
+@import '../../style.scss';
+
+.footer {
+    width: 100%;
+    background: #333;
+    color: white;
+
+    .copy {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 30px;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 100px;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+
+    .left {
+        width: 40%;
+
+        img {
+            width: 400px;
+
+            @include mobile {
+                width: 200px !important;
+            }
+        }
+
+        .company {
+
+            p {
+                padding: 20px;
+
+                @include mobile {
+                    padding: 0;
+                    width: 300px;
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .search {
+            border: 3px solid #fff;
+            padding: 2px;
+            display: flex;
+            border-radius: 50px;
+            height: 7vh;
+            width: max(100%, 300px);
+
+            @include mobile {
+                height: 4vh;
+                margin: 8px 0px;
+                border: 2px solid white;
+            }
+
+            input {
+                width: 100%;
+                height: 100%;
+                border: none;
+                border-radius: 30px;
+                font-size: 18px;
+                font-weight: Outfit;
+                padding: 0px 20px;
+                background: transparent;
+                color: white;
+
+                @include mobile {
+                    font-size: 12px;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            img {
+                object-fit: cover;
+                transform: rotate(270deg);
+                width: 80px !important;
+                margin-right: 0px;
+                border-radius: 50%;
+
+                @include mobile {
+                    width: 30px !important;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+}

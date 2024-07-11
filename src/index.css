@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Manrope:wght@200..800&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Manrope;
+}
+
+@keyframes popup {
+  0% {
+    transform: scale(0%);
+  }
+  100% {
+    transform: scale(105%);
+  }
+}
+
+@keyframes top {
+  0%{
+    transform: translateY(-80px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

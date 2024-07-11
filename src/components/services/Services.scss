@@ -1,0 +1,89 @@
+@import'../../style.scss';
+
+@include themify() {
+.services {
+    position: relative;
+    width: 100%;
+    background: themed("bg");
+    color: themed("textColor");
+
+    h2 {
+        font-size: max(3vw, 20px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0px;
+    }
+
+    .service-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        margin-top: 100px;
+        width: 100%;
+
+        .service-item {
+            cursor: pointer;
+            
+            @include mobile {
+                width: 80%;
+            }
+            
+
+            &:hover .service-details {
+                margin-left: -60px;
+            }
+
+            &:hover .desc {
+                opacity: 1 !important;
+            }
+        }
+
+        .service {
+            display: flex;
+            width: 95%;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            margin-top: 100px;
+            animation: popup linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+            
+            img {
+                width: max(20vw, 200px);
+                height: 45vh;
+                object-fit: cover;
+                position: relative;
+                border-radius: 20px;
+                transform: translateY(-50px);
+            }
+
+            .service-details {
+                background: themed("textColor");
+                color: themed("bg");
+                border-radius: 20px;
+                padding: 20px;
+                width: max(20vw, 240px);
+                height: 45vh;
+                margin-left: -200px;
+                display: flex;
+                flex-direction: column;
+                justify-content: right;
+                align-items: start;
+                transition: 0.4s;
+
+                .desc {
+                    width: 70%;
+                    margin-left: 45px;
+                    opacity: 0;
+                    transition: 1s;
+
+                    @include mobile {
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+}

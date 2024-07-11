@@ -1,0 +1,56 @@
+@import '../../style.scss';
+
+@include themify() {
+    .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 80px;
+
+    @include mobile {
+      width: 100%;
+      padding: 40px;
+      align-items: center;
+    }
+    
+    .logo {
+      position: absolute;
+      
+      img {
+      width: 200px;
+      object-fit: contain;
+
+      @include mobile {
+        width: 100px;
+        display: block;
+      }
+
+      }
+    }
+
+    .navlinks {
+      position: absolute;
+      right: 0;
+      padding: 0px 40px;
+
+      ul {
+        display: flex;
+
+        li {
+          color: themed("textColor");
+          padding: 0px 10px;
+          list-style: none;
+          font-size: 18px;
+          cursor: pointer;
+          
+          @include mobile {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
