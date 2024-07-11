@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap');
-
+@import '../../style.scss';
 .contact {
     width: 100%;
     min-height: 100vh;
@@ -16,6 +16,10 @@
         margin: 0;
         padding: 0;
         font-family: Baskervville SC;
+
+        @include mobile {
+            display: none;
+        }
     }
 
     .place-order {
@@ -27,6 +31,11 @@
         padding: 40px;
         border-radius: 30px;
         width: 70%;
+
+        @include mobile {
+            flex-direction: column;
+            width: 100%;
+        }
     
         .place-order-left {
             width: 100%;
@@ -34,6 +43,10 @@
             background: #ffffff70;
             border-radius: 40px;
             padding: 50px;
+
+            @include mobile {
+                max-width: max(100%, 300px) !important;
+            }
     
             .title {
                 font-size: 30px;
@@ -49,6 +62,10 @@
                 border: none;
                 background: transparent;
                 border-bottom: 1px solid black;
+
+                @include mobile {
+                    outline: none;
+                }
             }
 
             select {
@@ -74,6 +91,10 @@
             .multi-fields {
                 display: flex;
                 gap: 10px;
+
+                @include mobile {
+                    flex-direction: column;
+                }
             }
         }
     }
