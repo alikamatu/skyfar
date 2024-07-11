@@ -28,6 +28,10 @@
         background: themed("bgSoft");
         color: themed("textColor");
 
+        @include mobile {
+          width: 360px;
+        }
+
         .project-details {
 
           h3 {

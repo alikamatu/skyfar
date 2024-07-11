@@ -26,6 +26,12 @@
                 margin-top: 140px;
                 color: #fff;
                 text-transform: uppercase;
+
+                @include mobile {
+                    font-size: max(5vw, 50px);
+                    background: #4d47a3;
+                    width: 60%;
+                }
             }
             .about-desc {
                 margin: 100px;

@@ -10,9 +10,7 @@ const Footer = () => {
      <div className="left">
         <div className="company">
             <img src={logo} alt="" />
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, amet autem! 
-                Quam dicta impedit eos obcaecati perferendis, corporis perspiciatis 
-                excepturi laboriosam ad aliquid beatae, pariatur, quae aut fugit consequuntur? Ut!</p>
+            <p>For furthur enquiries</p>
         </div>
         <div className="search">
             <input type="email" placeholder='Your email' />
