@@ -3,7 +3,7 @@ import React, { useRef } from 'react'
 import './Header.scss'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/all'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Link } from 'react-router-dom'
 
 gsap.registerPlugin(ScrollTrigger)
