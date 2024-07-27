@@ -16,14 +16,16 @@ const Header = () => {
       opacity: 0,
       duration: 1,
       yoyo: true
-    } )
+    });
+
     gsap.from(".right", {
       y: 100,
       opacity: 0,
       duration: 1,
       delay: 1.3,
       stagger: 0.5
-    })
+    });
+
     const mainimg = gsap.utils.toArray(scrollRef.current.children);
     gsap.to(mainimg, {
       scale: 1.2,
@@ -41,7 +43,7 @@ const Header = () => {
       <div className="header-container">
         <div className="top">
           <div className="left">
-            <h2>Sophiscated Web Solutions for the Modern Enterprise</h2>
+            <h2>Sophisticated Web Solutions for the Modern Enterprise</h2>
           </div>
           <div className="right">
             <div className="text">Enhance your business with a refined and versatile Skyfar.</div>
