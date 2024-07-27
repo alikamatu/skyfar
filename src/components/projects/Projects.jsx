@@ -1,7 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import './Projects.scss';
-import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
@@ -31,42 +33,49 @@ const projects = [
 ];
 
 const Projects = () => {
+  const projectRef = useRef(null);
 
-  const scrollRef = useRef()
-
-useGSAP(()=> {
-  const mainimg = gsap.utils.toArray(scrollRef.current.children);
-  gsap.from(mainimg, {
-    y: 100,
-    opacity: 0,
-    stagger: 0.3,
-    scrollTrigger: {
-      trigger: mainimg,
-      start: 'bottom bottom',
-      end: 'top 20%',
-      scrub: true
-    }
-  })
-})
+  useEffect(() => {
+    const projects = gsap.utils.toArray('.project');
+    projects.forEach((project, i) => {
+      gsap.fromTo(project, 
+        { opacity: 0, scale: 0.5, y: 100 },
+        {
+          opacity: 1,
+          scale: 1,
+          y: 0,
+          duration: 1.5,
+          ease: 'power4.out',
+          scrollTrigger: {
+            trigger: project,
+            start: 'top 80%',
+            end: 'top 30%',
+            scrub: 1,
+            toggleActions: 'play none none reverse'
+          }
+        }
+      );
+    });
+  }, []);
 
   return (
     <section className="projects-display">
       <h2>Our Projects</h2>
       <p>Discover our range of cutting-edge technology products designed to elevate your business to new heights. From software solutions to hardware innovations, our products are crafted with precision and expertise to meet the demands of the modern digital landscape.</p>
-      <div className="project-list" ref={scrollRef}>
+      <div className="project-list" ref={projectRef}>
         {projects.map(project => (
           <div
             key={project.id}
             className="project"
           >
-          <div className="image-div">
-          <img src={project.imageUrl} alt={project.title} />
-          </div>
-              <div className="project-details">
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            <hr />
-            <button>Read More</button>
+            <div className="image-div">
+              <img src={project.imageUrl} alt={project.title} />
+            </div>
+            <div className="project-details">
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <hr />
+              <button>Read More</button>
             </div>
           </div>
         ))}

@@ -19,6 +19,23 @@ const Header = () => {
       stagger: 0.5
     });
 
+    gsap.from(".left h2", {
+      x: -200,
+      opacity: 0,
+      duration: 1,
+      delay: 0.5,
+      ease: "power3.out"
+    });
+
+    gsap.from(".btn-div", {
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      delay: 2,
+      ease: "power3.out",
+      stagger: 0.2
+    });
+
     const mainimg = gsap.utils.toArray(scrollRef.current.children);
     gsap.to(mainimg, {
       scale: 1.2,

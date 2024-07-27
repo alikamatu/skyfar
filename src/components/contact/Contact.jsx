@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-// import emailjs from 'emailjs-com';
+import emailjs from 'emailjs-com'
 import './Contact.scss';
 import Navbar from '../navbar/Navbar';
 
@@ -9,14 +9,14 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID')
-    //   .then((result) => {
-    //       console.log(result.text);
-    //       alert('Message sent successfully!');
-    //   }, (error) => {
-    //       console.log(error.text);
-    //       alert('Failed to send message. Please try again.');
-    //   });
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID')
+      .then((result) => {
+          console.log(result.text);
+          alert('Message sent successfully!');
+      }, (error) => {
+          console.log(error.text);
+          alert('Failed to send message. Please try again.');
+      });
 
     e.target.reset();
   };

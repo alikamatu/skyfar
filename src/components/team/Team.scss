@@ -79,6 +79,7 @@
                     width: 600px;
                     height: 700px;
                     object-fit: cover;
+                    
                 @include mobile {
                     display: none;
                 }

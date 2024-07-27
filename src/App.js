@@ -1,17 +1,14 @@
 import React, { useContext } from 'react';
 import './App.scss'
 import Footer from './components/footer/Footer';
-import { DarkModeContext } from './components/darkModeContext';
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
 
 const App = () => {
-  // const [theme, setTheme] = useState('theme-default');
 
-const {darkMode} = useContext(DarkModeContext);
-
+let darkMode;
 
   return (
     <div className={`theme-${darkMode? "dark" : "dark"}`}>

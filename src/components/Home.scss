@@ -2,7 +2,6 @@
 
 @include themify() {
 .home {
-  // background: themed("bg");
-
+  animation: fadeIn 1s;
 }
 }
