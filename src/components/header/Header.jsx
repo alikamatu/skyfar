@@ -1,18 +1,16 @@
-import Navbar from '../navbar/Navbar'
-import React, { useRef } from 'react'
-import './Header.scss'
-import { useGSAP } from '@gsap/react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { Link } from 'react-router-dom'
+import Navbar from '../navbar/Navbar';
+import React, { useEffect, useRef } from 'react';
+import './Header.scss';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Link } from 'react-router-dom';
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 const Header = () => {
-
   const scrollRef = useRef();
 
-  useGSAP(()=> {
+  useEffect(() => {
     gsap.from("h2", {
       y: 200,
       opacity: 0,
@@ -27,7 +25,7 @@ const Header = () => {
       stagger: 0.5
     })
     const mainimg = gsap.utils.toArray(scrollRef.current.children);
-    gsap.to(mainimg , {
+    gsap.to(mainimg, {
       scale: 1.2,
       scrollTrigger: {
         trigger: mainimg,
@@ -35,8 +33,8 @@ const Header = () => {
         end: 'top 20%',
         scrub: true
       }
-    })
-  }, [])
+    });
+  }, []);
 
   return (
     <div className='header'>
@@ -48,22 +46,22 @@ const Header = () => {
           <div className="right">
             <div className="text">Enhance your business with a refined and versatile Skyfar.</div>
             <div className="btn-div">
-              <Link className='text' to='/contact' >
-              <p className='text'>Get Started</p>
+              <Link className='text' to='/contact'>
+                <p className='text'>Get Started</p>
               </Link>
-              <Link className='text' to='/about' > 
-              <p className='text'>Learn More</p>
+              <Link className='text' to='/about'>
+                <p className='text'>Learn More</p>
               </Link>
             </div>
           </div>
         </div>
-        <div className="down" ref={scrollRef} >
+        <div className="down" ref={scrollRef}>
           <img className='mainimg' src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Ds' alt="" />
         </div>
       </div>
       <Navbar />
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;
