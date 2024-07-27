@@ -11,13 +11,6 @@ const Header = () => {
   const scrollRef = useRef();
 
   useEffect(() => {
-    gsap.from("h2", {
-      y: 200,
-      opacity: 0,
-      duration: 1,
-      yoyo: true
-    });
-
     gsap.from(".right", {
       y: 100,
       opacity: 0,
