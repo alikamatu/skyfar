@@ -3,21 +3,19 @@ $themes: (
         textColor: #000,
         bg: white,
         logo: darkblue,
-        bgSoft: #f6f3f3,
+        bgSoft: #333,
         textColorsoft: #000,
         borderColor: lightgray,
         bgOp: #222,
-        br: brightness(100%)
     ),  
     dark: (
         textColor: white,
-        bg: #000,
+        bg: #111,
         logo: white,
-        bgSoft: #111,
+        bgSoft: #333,
         textColorsoft: lightgray,
         borderColor: black,
-        br: brightness(60%),
-        bgOp: white
+        bgOp: white,
     )
 );
 

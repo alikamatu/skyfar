@@ -7,6 +7,15 @@
   font-family: Manrope;
 }
 
+body {
+  background: #171d27 !important;
+}
+
+Link {
+  text-decoration: none;
+  color: white;
+}
+
 @keyframes popup {
   0% {
     transform: scale(0%);

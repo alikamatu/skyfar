@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './Projects.scss';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 const projects = [
   {
@@ -30,23 +32,42 @@ const projects = [
 
 const Projects = () => {
 
+  const scrollRef = useRef()
+
+useGSAP(()=> {
+  const mainimg = gsap.utils.toArray(scrollRef.current.children);
+  gsap.from(mainimg, {
+    y: 100,
+    opacity: 0,
+    stagger: 0.3,
+    scrollTrigger: {
+      trigger: mainimg,
+      start: 'bottom bottom',
+      end: 'top 20%',
+      scrub: true
+    }
+  })
+})
+
   return (
     <section className="projects-display">
       <h2>Our Projects</h2>
-      <div className="project-list">
+      <p>Discover our range of cutting-edge technology products designed to elevate your business to new heights. From software solutions to hardware innovations, our products are crafted with precision and expertise to meet the demands of the modern digital landscape.</p>
+      <div className="project-list" ref={scrollRef}>
         {projects.map(project => (
           <div
             key={project.id}
             className="project"
           >
+          <div className="image-div">
+          <img src={project.imageUrl} alt={project.title} />
+          </div>
               <div className="project-details">
             <h3>{project.title}</h3>
             <p>{project.description}</p>
+            <hr />
+            <button>Read More</button>
             </div>
-          <div className="image-div">
-          <img src={project.imageUrl} alt={project.title} />
-          <button>Read More</button>
-          </div>
           </div>
         ))}
       </div>

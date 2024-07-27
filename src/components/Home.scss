@@ -1,0 +1,8 @@
+@import '../style.scss';
+
+@include themify() {
+.home {
+  // background: themed("bg");
+
+}
+}

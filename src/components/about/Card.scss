@@ -1,0 +1,88 @@
+@import '../../style.scss';
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin: 40px;
+    min-height: 100vh;
+
+    h2 {
+        background: #10A6C0;
+        text-transform: uppercase;
+        font-size: 18px;
+        padding: 5px 30px;
+        border-radius: 20px;
+    }
+
+    .title {
+        font-size: 34px;
+    }
+
+    .about-service {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+        @include mobile {
+            display: grid !important;
+            grid-template-columns: 1fr;
+        }
+    
+        .service-card {
+            display: flex;
+            flex-direction: column;
+            width: 25%;
+            margin: 10px;
+            height: 320px;
+            padding: 50px;
+            border-radius: 15px;
+            background: #ffffff17 !important;
+
+            @include mobile {
+                width: 100%;
+            }
+
+    
+            .top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            }
+    
+            h4 {
+                padding: 20px 0px;
+            }
+            
+            p{
+                color: #757575;
+            }
+
+            .right {
+                position: relative;
+
+                .round {
+                    padding: 15px;
+                    width: 3%;
+                    border-radius: 50%;
+                    background: #10a6c06c;
+                    position: absolute;
+                    top: -3%;
+                    right: -5%;
+                }
+
+                .icon  {
+                    position: relative;
+                }
+            }
+        }
+    
+        img {
+            width: 80px;
+        }
+    }
+}

@@ -1,0 +1,88 @@
+@import '../../style.scss';
+
+.team {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+
+    .team-container {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        
+        @include mobile {
+            flex-direction: column;
+        }
+
+        .left {
+
+                h2 {
+                    background: #10A6C0;
+                    text-transform: uppercase;
+                    font-size: 18px;
+                    padding: 5px 30px;
+                    border-radius: 20px;
+                    width: 20%;
+                    text-align: center;
+                    margin: 20px 0px;
+
+                    @include mobile {
+                        width: 100%;
+                    }
+                }
+
+            .content {
+                display: flex;
+                margin: 40px 0px;
+                
+                @include mobile {
+                    flex-direction: column;
+                }
+
+                .icon {
+                    font-size: 54px;
+                    color: #10A6C0;
+                }
+
+                h3 {
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+
+                p{
+                    color: #757575;
+                }
+            }
+            
+            button {
+                padding: 10px 20px;
+                border-radius: 30px;
+                background: transparent;
+                border: none;
+                border-top: 2px solid #10A6C0;
+                border-left: 2px solid #10A6C0;
+                transition: 0.4s;
+                cursor: pointer;
+
+                &:hover {
+                background: #10A6C0;
+                color: white;
+                }
+            }
+        }
+
+        .right {
+
+            img {
+                    width: 600px;
+                    height: 700px;
+                    object-fit: cover;
+                @include mobile {
+                    display: none;
+                }
+            }
+        }
+    }
+}

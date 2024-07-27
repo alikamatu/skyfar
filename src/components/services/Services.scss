@@ -4,22 +4,22 @@
 .services {
     position: relative;
     width: 100%;
-    background: themed("bg");
     color: themed("textColor");
 
     h2 {
-        font-size: max(3vw, 20px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 30px 0px;
+        margin: 40px 250px;
+        font-size: 60px;
+
+                
+        @include mobile {
+            margin: 40px 0px;
+        }
     }
 
     .service-list {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-        margin-top: 100px;
-        width: 100%;
+            width: 100%;
 
         .service-item {
             cursor: pointer;
@@ -60,7 +60,7 @@
 
             .service-details {
                 background: themed("textColor");
-                color: themed("bg");
+                color: themed("bgSoft");
                 border-radius: 20px;
                 padding: 20px;
                 width: max(20vw, 240px);

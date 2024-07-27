@@ -8,7 +8,6 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    background: url('https://img.freepik.com/free-vector/realistic-handset-concept_1284-34781.jpg?t=st=1720699108~exp=1720702708~hmac=375bbf723e0a7edd32c8d5419f8e0b642934da3ba32b6c661776052949447d14&w=1380');
     background-size: cover;
 
     h1 {
@@ -16,6 +15,7 @@
         margin: 0;
         padding: 0;
         font-family: Baskervville SC;
+        color: white;
 
         @include mobile {
             display: none;
@@ -40,9 +40,14 @@
         .place-order-left {
             width: 100%;
             max-width: max(70%, 800px);
-            background: #ffffff70;
+            background: #ffffff17;
             border-radius: 40px;
             padding: 50px;
+            color: white;
+
+            @include mobile {
+                background: transparent;
+            }
 
             @include mobile {
                 max-width: max(100%, 300px) !important;
@@ -52,17 +57,19 @@
                 font-size: 20px;
                 font-weight: 600;
                 margin-bottom: 50px;
+                color: white;
             }
     
             input {
                 margin-bottom: 15px;
                 width: 100%;
                 padding: 10px;
-                outline-color: tomato;
+                outline: none;
                 border: none;
                 background: transparent;
-                border-bottom: 1px solid black;
+                border-bottom: 1px solid white;
                 border-radius: 0 !important;
+                color: white;
 
                 @include mobile {
                     outline: none;
@@ -75,21 +82,24 @@
                 width: 100%;
                 border: none;
                 background: transparent;
-                border-bottom: 1px solid black;
-                color: black;
+                border-bottom: 1px solid white;
+                color: white;
                 outline: none;
+
+                option {
+                    color: black;
+                }
             }
 
             textarea {
                 padding: 10px;
-                border: 1px solid black;
+                border: 1px solid white;
                 border-radius: 4px;
                 margin-bottom: 15px;
                 width: 100%;
                 background: transparent;
                 border-radius: 0 !important;
             }
-    
     
             .multi-fields {
                 display: flex;
@@ -107,7 +117,7 @@
         font-size: 18px;
         font-weight: 500;
         border: none;
-        background: black;
-        color: white;
+        background: white;
+        color: black;
     }
 }

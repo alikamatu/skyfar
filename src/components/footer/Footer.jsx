@@ -1,40 +1,40 @@
 import React from 'react'
 import './Footer.scss'
-import logo from '../files/SkyFar2.png'
-import send from '../files/down_button_100px.png'
+import { FaFacebook } from 'react-icons/fa'
+import { FaWhatsapp, FaXTwitter } from 'react-icons/fa6'
+import { LiaLinkedin } from 'react-icons/lia'
 
 const Footer = () => {
   return (
     <div className='footer'>
-     <div className="footer-content">
-     <div className="left">
-        <div className="company">
-            <img src={logo} alt="" />
-            <p>For furthur enquiries</p>
+      <div className="footer-container">
+        <div className="top">
+          <div className="content">
+            <h3>Company</h3>
+            <p>About Us</p>
+            <p>Blog</p>
+            <p>Privacy Policy</p>
+            <p>Terms and Conditions</p>
+          </div>
+          <div className="content">
+            <h3>Support</h3>
+            <p>Knowledge Base</p>
+            <p>FAQs</p>
+            <p>Documentation</p>
+            <p>Community Forum</p>
+          </div>
         </div>
-        <div className="search">
-            <input type="email" placeholder='Your email' />
-            <img src={send} alt="" />
+        <hr />
+        <div className="bottom">
+        <h2>Skyfar</h2>
+        <p>&copy; All Rights Reserved</p>
+        <div className="socials">
+          <FaFacebook className='icon' />
+          <FaXTwitter className='icon' />
+          <LiaLinkedin className='icon' />
+          <FaWhatsapp className='icon' />
         </div>
-      </div>
-      <div className="center">
-            <h2>Company</h2>
-            <p>About</p>
-            <p>Team</p>
-            <p>F&Q</p>
-            <p>Contact</p>
-      </div>
-      <div className="right">
-            <h2>Socials</h2>
-            <p>Facebook</p>
-            <p>Twitter</p>
-            <p>WhatsApp</p>
-      </div>
-     </div>
-      <hr />
-      <div className="copy">
-        <p>&copy; Skyfar Inc. All Rights Reserved 2024</p>
-        <p>Terms & Conditions</p>
+        </div>
       </div>
     </div>
   )

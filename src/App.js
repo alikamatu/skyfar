@@ -14,7 +14,7 @@ const {darkMode} = useContext(DarkModeContext);
 
 
   return (
-    <div className={`theme-${darkMode? "light" : "dark"}`}>
+    <div className={`theme-${darkMode? "dark" : "dark"}`}>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
