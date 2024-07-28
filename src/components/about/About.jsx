@@ -1,81 +1,11 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import './About.scss';
 import Navbar from '../navbar/Navbar';
 import film from '../files/About - STAX.mp4';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import gsap from 'gsap';
 
-gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
-  const scrollRef = useRef();
-
-  useEffect(() => {
-    const para = gsap.utils.toArray(scrollRef.current.children);
-
-    gsap.from(para, {
-      opacity: 0,
-      stagger: 0.4,
-      y: 100,
-      duration: 1,
-      scrollTrigger: {
-        trigger: para,
-        start: 'bottom bottom',
-        end: 'top 20%',
-        scrub: true
-      }
-    });
-
-    gsap.from(".content h1", {
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      scrollTrigger: {
-        trigger: ".content h1",
-        start: 'top 90%',
-        end: 'top 50%',
-        scrub: true
-      }
-    });
-
-    gsap.from(".about-text p", {
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      scrollTrigger: {
-        trigger: ".about-text p",
-        start: 'top 90%',
-        end: 'top 50%',
-        scrub: true
-      }
-    });
-
-    gsap.from(".status-head h2", {
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      scrollTrigger: {
-        trigger: ".status-head h2",
-        start: 'top 90%',
-        end: 'top 50%',
-        scrub: true
-      }
-    });
-
-    gsap.from(".status-text", {
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      stagger: 0.2,
-      scrollTrigger: {
-        trigger: ".status-text",
-        start: 'top 90%',
-        end: 'top 50%',
-        scrub: true
-      }
-    });
-  }, []);
-
+  
   return (
     <div className='about'>
       <div className="about-container">
