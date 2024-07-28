@@ -93,7 +93,7 @@ const About = () => {
             Skyfar is leading web hosting, online marketing, e-commerce, online payments and web development company, with offices in Harare and Bulawayo. Webdev has been in business for over 20 years in Zimbabwe, and we have developed over 1,000 web sites, we have over 3,000 hosting clients, over 1,000 online payment merchants, and over 30,000 online classifieds adverts. With a considerable skill set at our disposal from the Webdev team, we are uniquely positioned to offer specialist web-based solutions for a diverse range of client requirements.
           </p>
         </div>
-        <div className="status" ref={scrollRef}>
+        <div className="status">
           <div className="status-head">
             <h2>Core Values</h2>
           </div>
